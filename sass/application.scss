@@ -2,7 +2,8 @@
 @font-face { font-family: JosefinSlab; src: url('../fonts/josefin-slab/JosefinSlab-Regular.ttf'); }
 @font-face { font-family: JosefinSlab; font-weight: bold; src: url('../fonts/josefin-slab/JosefinSlab-Bold.ttf'); }
 
-$mq-break-phone: 480px;
+$mq-break-phone-portrait: 400px;
+$mq-break-phone-landscape: 620px;
 $mq-break-tab: 768px;
 $mq-break-desk: 980px;
 $mq-break-large: 1200px;
@@ -18,7 +19,7 @@ $color-black: black;
 
 body {
 	font-family: $font-body;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	background: $color-bkg;
 	color: $color-txt;
 	text-align: center;
@@ -30,6 +31,10 @@ h1 {
 	font-weight: normal;
 	padding: 0;
 	margin:1em 0 0;
+		@media screen and (min-width: $mq-break-phone-portrait) {
+			width:150px;
+			margin:0 auto;		
+		}
 }
 img,
 iframe {
@@ -62,6 +67,12 @@ p {
 	&#intro {
 		max-width: 440px;
 		margin: 0 auto 1em;
+		line-height: 1.75em;
+		letter-spacing: 0.1em;
+		@media screen and (min-width: $mq-break-phone-portrait) {
+			line-height: 1.2em;
+			font-size:1em;
+		}
 	}
 }
 h2 {
@@ -72,7 +83,8 @@ h2 {
 		width: 110px;
 		margin: 0;
 		padding: 0;
-		opacity: 50%;
+		opacity: 0.6;
+		z-index: 100000000000;
 	}
 }
 .videocontainer, 
@@ -87,6 +99,7 @@ iframe {
 	position: absolute;
 	top: 0;
 	right: 0.5em;
+	z-index: 100000000000;
 	li {
 		list-style: none;
 		list-style-image: none;
