@@ -1,0 +1,48 @@
+@font-face { font-family: Rokkit; src: url('../fonts/rokkitt/Rokkitt.otf'); } 
+@font-face { font-family: JosefinSlab; src: url('../fonts/josefin-slab/JosefinSlab-Regular.ttf'); }
+@font-face { font-family: JosefinSlab; font-weight: bold; src: url('../fonts/josefin-slab/JosefinSlab-Bold.ttf'); }
+
+$mq-break-phone: 480px;
+$mq-break-tab: 768px;
+$mq-break-desk: 980px;
+$mq-break-large: 1200px;
+
+$font-body: JosefinSlab, Helvetica, arial, sans-serif;
+$font-fancy: Rokkit, courier, monotype;
+
+$color-bkg: #222A2D;
+$color-txt: white;
+$color-active: #23D6F6;
+$color-inactive: #8B8B8B;
+$color-black: black;
+
+body {
+	font-family: $font-body;
+	font-size: 1.5em;
+	background: $color-bkg;
+	color: $color-txt;
+	text-align: center;
+}
+h1 {
+	font-family: $font-fancy;
+	font-size:2.5em;
+	font-weight: normal;
+	padding: 0;
+	margin:1em 0 0;
+}
+img,
+iframe,
+input {
+	max-width:100% !important;
+}
+input {
+	background: $color-black;
+	padding: 0.3em;
+	font-size: 1em;
+	color: $color-txt;
+	font-family: $font-body;
+	border: 1px solid $color-bkg + #222;
+}
+button {
+	
+}
